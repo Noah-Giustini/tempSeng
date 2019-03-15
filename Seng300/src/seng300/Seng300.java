@@ -24,6 +24,9 @@ public static Stage mainStage;
     
     @Override
     public void start(Stage stage) throws Exception {
+        //put something in here to create A.L of Scholarships and Applications
+        //this will be stored here as instance variables
+        
         Seng300.mainStage = stage;
         Parent root = FXMLLoader.load(getClass().getResource("adminMainPage.fxml"));
         

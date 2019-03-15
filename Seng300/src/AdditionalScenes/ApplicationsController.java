@@ -15,6 +15,7 @@ import javafx.fxml.Initializable;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
+import javafx.scene.control.RadioButton;
 import javafx.scene.control.TextArea;
 import javafx.stage.Stage;
 import seng300.Seng300;
@@ -50,6 +51,16 @@ public class ApplicationsController implements Initializable {
     private Button view1;
     @FXML
     private Button EditAppliicationList;
+    @FXML
+    private RadioButton radioButton1;
+    @FXML
+    private RadioButton radioButton2;
+    @FXML
+    private RadioButton radioButton3;
+    @FXML
+    private RadioButton radioButton4;
+    @FXML
+    private RadioButton radioButton5;
 
     /**
      * Initializes the controller class.
@@ -57,13 +68,13 @@ public class ApplicationsController implements Initializable {
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         // TODO
-    }    
+    }
 
     @FXML
     private void backToMain(ActionEvent event) throws IOException {
         Parent root = FXMLLoader.load(getClass().getResource("/seng300/adminMainPage.fxml"));
         Scene sc = new Scene(root);
-        Stage s = Seng300.mainStage; 
+        Stage s = Seng300.mainStage;
         s.setTitle("Home");
         s.setScene(sc);
         s.show();
@@ -73,10 +84,24 @@ public class ApplicationsController implements Initializable {
     private void openViewApplication(ActionEvent event) throws IOException {
         Parent root = FXMLLoader.load(getClass().getResource("/AdditionalScenes/ApplicationView.fxml"));
         Scene sc = new Scene(root);
-        Stage s = Seng300.mainStage; 
+        Stage s = Seng300.mainStage;
         s.setTitle("Home");
         s.setScene(sc);
         s.show();
     }
-    
+
+    @FXML
+    private void openEditApplication(ActionEvent event) throws IOException {
+        if (radioButton1.isSelected()) {
+            //Take the text from view1 and show it in the edit pane 
+
+        }
+        Parent root = FXMLLoader.load(getClass().getResource("/AdditionalScenes/ApplicationView.fxml"));
+        Scene sc = new Scene(root);
+        Stage s = Seng300.mainStage;
+        s.setTitle("Home");
+        s.setScene(sc);
+        s.show();
+    }
+
 }
